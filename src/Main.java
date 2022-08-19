@@ -13,36 +13,36 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1");
         int[] arr = generateRandomArray();
-        int arr1 = 0;
+        int all = 0;
         for (int i = 0; i < arr.length - 1; i++) {
-            arr1 += arr[i];
+            all += arr[i];
         }
-        System.out.println("Сумма трат за месяц составила " + arr1 + " рублей");
+        System.out.printf("Сумма трат за месяц составила %d рублей.",all );
 
 
         //Задание 2
         System.out.println();
         System.out.println("Задание 2");
-        int arr2 = 0;
-        int arr3 = 0;
+        int min = 0;
+        int max = 0;
         for(int i=0; i<arr.length-1; i++){
             if(arr[i]<arr[i+1]){
-                arr2+=arr[i];
+                min+=arr[i];
             }
             if(arr[i]>arr[i+1]){
-                arr3+=arr[i];
+                max+=arr[i];
             }
         }
-        System.out.println("Минимальная сумма трат за день составила "+ arr2 + " рублей. Максимальная сумма трат за день составила " + arr3 +" рублей.");
+        System.out.printf("Минимальная сумма трат за день составила %d рублей. Максимальная сумма трат за день составила %d рублей.", min, max);
 
 
 
         //Задание 3
         System.out.println();
         System.out.println("Задание 3");
-        int a = 0;
-        a = arr1/arr.length-1;
-        System.out.println("Средняя сумма трат за месяц составила "+a+" рублей.");
+        int average = 0;
+        average = all/arr.length-1;
+        System.out.printf("Средняя сумма трат за месяц составила %d рублей.", average);
 
 
 
